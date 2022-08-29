@@ -1,0 +1,32 @@
+                                                       ***  R E D   P A N D A  ***
+
+1.) NMAP RESULT :
+
+# Nmap 7.92 scan initiated Mon Aug 29 11:30:54 2022 as: nmap -sCV -oN nmap-10.10.11.170 -v -A 10.10.11.170
+Increasing send delay for 10.10.11.170 from 0 to 5 due to 67 out of 222 dropped probes since last increase.
+Nmap scan report for 10.10.11.170
+Host is up (0.25s latency).
+Not shown: 998 closed tcp ports (conn-refused)
+PORT     STATE SERVICE    VERSION
+22/tcp   open  ssh        OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 48:ad:d5:b8:3a:9f:bc:be:f7:e8:20:1e:f6:bf:de:ae (RSA)
+|   256 b7:89:6c:0b:20:ed:49:b2:c1:86:7c:29:92:74:1c:1f (ECDSA)
+|_  256 18:cd:9d:08:a6:21:a8:b8:b6:f7:9f:8d:40:51:54:fb (ED25519)
+8080/tcp open  http-proxy
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+
+
+
+
+2.) DIRECTORY BRUTE FORCE RESULT:
+
+/search               (Status: 405) [Size: 117]
+/\"                   (Status: 400) [Size: 435]
+/error                (Status: 500) [Size: 86] 
+/stats                (Status: 200) [Size: 987]
+
+GOT TWO USERNAMES :
+
+
